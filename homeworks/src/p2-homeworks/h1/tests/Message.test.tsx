@@ -2,7 +2,7 @@ import React from 'react'
 import {render} from '@testing-library/react'
 import Message from '../Message'
 
-/*test('find text "test message name"', () => {
+test('find text "test message name"', () => {
     const {getByText} = render((
         <Message
             avatar=""
@@ -37,4 +37,4 @@ test('find text "test message time"', () => {
     ))
     const linkElement = getByText(/test message time/i)
     expect(linkElement).toBeInTheDocument()
-})*/
+})
