@@ -1,0 +1,18 @@
+.select {
+    width: 60px;
+    padding: 6px;
+    margin: 8px 0px;
+    background-color: lightskyblue;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.option {
+    color: crimson;
+    background-color: aqua;
+}
+
+.option:checked {
+    background-color: crimson;
+    color: aqua;
+}

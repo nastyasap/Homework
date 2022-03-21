@@ -1,4 +1,5 @@
 import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState} from 'react'
+import s from './SuperEditableSpan.module.css'
 import SuperInputText from '../../../h4/common/c1-SuperInputText/SuperInputText'
 
 // тип пропсов обычного инпута
@@ -46,7 +47,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         onDoubleClick && onDoubleClick(e)
     }
 
-    const spanClassName = `${'сделать красивый стиль для спана'} ${className}`
+    const spanClassName = `${s.span} ${className ? className : ''}`
 
     return (
         <>
@@ -60,7 +61,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                         {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
                     />
                 ) : (
-                    <span style={{display: 'block', margin: '20px 3px'}}
+                    <span
                         onDoubleClick={onDoubleClickCallBack}
                         className={spanClassName}
 
