@@ -1,0 +1,14 @@
+.buttons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.item {
+    width: 200px;
+}
