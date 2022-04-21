@@ -7,7 +7,7 @@ import {loadingAC, loadingPropsType} from "./bll/loadingReducer"
 import s from "./HW10.module.css"
 
 function HW10() {
-    const loadingState = useSelector<AppStoreType, loadingPropsType>(state => state.loading)
+    const isLoading = useSelector<AppStoreType, boolean>(state => state.loading.isLoading)
     const dispatch = useDispatch()
 
     const setLoading = () => {
@@ -20,7 +20,7 @@ function HW10() {
             <hr/>
             homeworks 10
 
-            {loadingState.loading
+            {isLoading
                 ? (
                     <div><img className={s.preloader} src={preloader}/></div>
                 ) : (

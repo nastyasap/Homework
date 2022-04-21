@@ -1,10 +1,22 @@
 import React, {useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
+import s from './HW11.module.css'
 
 function HW11() {
     const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
+    const [value2, setValue2] = useState<number[]>([value1, 100])
+
+    const onChangeRange = (value: number) => {
+        setValue1(value)
+        setValue2([value, value2[1]])
+    }
+
+    const onChangeDoubleRange = (value: number[]) => {
+        setValue1(value[0])
+        setValue2(value)
+    }
+
 
     return (
         <div>
@@ -12,21 +24,24 @@ function HW11() {
             homeworks 11
 
             {/*should work (должно работать)*/}
-            <div>
+            <div className={s.wrapper}>
                 <span>{value1}</span>
                 <SuperRange
-                    // сделать так чтоб value1 изменялось
+                    value={value1}
+                    onChangeRange={onChangeRange}
                 />
             </div>
 
-            <div>
-                <span>{value1}</span>
+            <div className={s.wrapper}>
+                <div className={s.numberWrapper}>
+                    <span>{value2[0]}</span>
+                    <span>{value2[1]}</span>
+                </div>
                 <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
+                    value={value2}
+                    onChangeDoubleRange={onChangeDoubleRange}
                 />
-                <span>{value2}</span>
             </div>
-
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperRange/>*/}

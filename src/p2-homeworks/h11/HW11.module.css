@@ -1,0 +1,9 @@
+.numberWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wrapper {
+    width: 300px;
+}
