@@ -14,6 +14,22 @@
     color: aqua;
 }
 
+.brown {
+    background: saddlebrown;
+}
+
+.brown-text {
+    color: #e69e6a;
+}
+
+.blue {
+    background: #0677dd;
+}
+
+.blue-text {
+    color: #e6a7e7;
+}
+
 .some {
     background: lightgreen;
 }
